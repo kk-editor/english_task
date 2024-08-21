@@ -1,0 +1,122 @@
+/* Background video settings */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.7; /* Adjust the opacity to make the text more readable */
+}
+
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#game {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+/* Custom fonts and spacing */
+h1 {
+    font-family: 'Mystery Font', cursive;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+button {
+    background-color: #444444;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555555;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #666666;
+    transform: scale(1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #game {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    #game {
+        padding: 10px;
+    }
+
+    button {
+        padding: 15px 10px;
+    }
+}
+
+/* Fade-in effect for new content */
+#story-text {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+#story-text, #choices button {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Fade-in and slide-down effect */
+@keyframes fadeInSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
